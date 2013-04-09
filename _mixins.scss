@@ -26,3 +26,28 @@
      */
     *zoom: 1;
 }
+
+
+/* Usage:
+ * - with default selectors (footer, body):
+ *   @include sticky-footer(100px);
+ * - with custom selectors:
+ *   @include sticky-footer($footer_height: 72px, $footer: "footer.footer_small", $body: "body.inner");
+ */
+
+@mixin sticky-footer ($footer_height, $footer_before: 10px, $footer: "footer", $body: "body") {
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  #{$body} {
+    margin-bottom: $footer_height + $footer_before;
+  }
+  #{$footer} {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: $footer_height;
+    width: 100%;
+  }
+}
