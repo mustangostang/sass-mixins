@@ -42,12 +42,12 @@
   }
   #{$body} {
     margin-bottom: $footer_height + $footer_before;
-  }
-  #{$footer} {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: $footer_height;
-    width: 100%;
+    #{$footer} {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: $footer_height;
+      width: 100%;
+    }
   }
 }
