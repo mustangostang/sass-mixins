@@ -1,0 +1,35 @@
+// http://hugogiraudel.com/2013/08/05/offsets-sass-mixin/
+/**
+ * Private method
+ * Can be called but it's not the point
+ */
+@mixin _position($position, $args) {
+  $offsets: top right bottom left;
+
+  @each $o in $offsets {
+    $i: index($args, $o);
+    @if $i
+    and $i + 1 <= length($args)
+    and type-of( nth($args, $i + 1) ) == number {
+      #{$o}: nth($args, $i + 1);
+    }
+  }
+
+  position: $position;
+}
+
+/**
+ * Mixin triplet calling the private mixin
+ * with the appropriate position value
+ */
+@mixin absolute($args) {
+  @include _position(absolute, $args);
+}
+
+@mixin relative($args) {
+  @include _position(relative, $args);
+}
+
+@mixin    fixed($args) {
+  @include _position(fixed,    $args);
+}
