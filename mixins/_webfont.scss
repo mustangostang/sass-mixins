@@ -1,0 +1,14 @@
+@mixin webfont($font-family, $file_path, $font-weight: "normal", $font-style: "normal") {
+
+@font-face {
+    font-family: $font-family;
+    src: font-url("#{$file-path}.eot");
+    src: url(font-path("#{$file-path}.eot") + "?#iefix") format('embedded-opentype'),
+         font-url('#{$file-path}.woff') format('woff'),
+         font-url('#{$file-path}.ttf') format('truetype'),
+         url(font-path("#{$file-path}.svg") + "#ArimoRegular") format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+}
+
+}
