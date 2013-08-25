@@ -1,6 +1,7 @@
 /* Usage:
  * - with default selectors (footer, body):
  *   @include sticky-footer(100px);
+ *
  * - with custom selectors:
  *   @include sticky-footer($footer_height: 72px, $footer: "footer.footer_small", $body: "body.inner");
  */
