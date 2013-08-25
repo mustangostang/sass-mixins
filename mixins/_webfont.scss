@@ -1,4 +1,4 @@
-@mixin webfont($font-family, $file_path, $font-weight: "normal", $font-style: "normal") {
+@mixin webfont($font-family, $file_path, $font-weight: normal, $font-style: normal) {
 
 @font-face {
     font-family: $font-family;
