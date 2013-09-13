@@ -6,7 +6,7 @@
     src: url(font-path("#{$file-path}.eot") + "?#iefix") format('embedded-opentype'),
          font-url('#{$file-path}.woff') format('woff'),
          font-url('#{$file-path}.ttf') format('truetype'),
-         url(font-path("#{$file-path}.svg") + "#ArimoRegular") format('svg');
+         url(font-path("#{$file-path}.svg") + "#" + "#{$font-family}") format('svg');
     font-weight: $font-weight;
     font-style: $font-style;
 }
