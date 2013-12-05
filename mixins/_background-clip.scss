@@ -1,0 +1,10 @@
+/* The background clip for text mixin */
+/* Based on Divya's pure CSS solution: http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html */
+@mixin clip-text($img-url, $fallback-color: #000) {
+  color: $fallback-color;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(transparent, transparent),
+              url($img-url) repeat;
+  background: -o-linear-gradient(transparent, transparent);
+  -webkit-background-clip: text;
+}
